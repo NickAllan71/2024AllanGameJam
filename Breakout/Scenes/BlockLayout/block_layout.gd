@@ -1,29 +1,26 @@
 @tool
 extends Node2D
 
-@export var rows: int:
+@export var rows: int = 1:
 	set(val):
-		rows = max(val, 0);
+		rows = max(val, 1);
 		position_blocks();
-@export var cols: int:
+@export var cols: int = 1:
 	set(val):
-		cols = max(val, 0);
+		cols = max(val, 1);
 		position_blocks();
 
-@export var row_gap: int:
+@export var row_gap: int = 0:
 	set(val):
 		row_gap = max(val, 0);
 		position_blocks();
-@export var col_gap: int:
+@export var col_gap: int = 0:
 	set(val):
 		col_gap = max(val, 0);
 		position_blocks();
 
 const block_scene = preload("res://Scenes/Block/block.tscn");
 const half_block_scene = preload("res://Scenes/Block/half_block.tscn");
-
-var prev_rows = 0;
-var prev_cols = 0;
 
 var blocks = [];
 
@@ -49,7 +46,7 @@ func position_blocks():
 	blocks = []
 		
 	for row in rows:
-		var cols_in_row = cols;
+		var cols_in_row = cols - 1;
 		if row % 2 == 1:
 			place_new_block(row, 0, half_block_scene, 96, 64);
 			cols_in_row;
@@ -58,4 +55,4 @@ func position_blocks():
 			place_new_block(row, col + (row % 2), block_scene, 192, 64);
 			
 		if row % 2 == 0:
-			place_new_block(row, cols, half_block_scene, 96, 64);
+			place_new_block(row, cols - 1, half_block_scene, 96, 64);
