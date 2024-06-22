@@ -30,6 +30,12 @@ func _ready():
 	
 func place_new_block(row, col, block_type, width, height):
 	var new_block = block_type.instantiate();
+	if width == 96:
+		var anim = new_block.get_child(1) as AnimatedSprite2D;
+		if col == 0:
+			anim.animation = "left"
+		else:
+			anim.animation = "right"
 	add_child(new_block);
 	blocks.append(new_block);
 	new_block.position.y = (height / 2) + (row * (64 + col_gap));
