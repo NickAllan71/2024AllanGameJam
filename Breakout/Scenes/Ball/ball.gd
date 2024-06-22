@@ -21,10 +21,11 @@ func _physics_process(delta):
 	var col = move_and_collide(vel);
 	if col != null:
 		var col_norm = col.get_normal();
-		if (col_norm.x < 0 and dir.x > 0) or (col_norm.x > 0 and dir.x < 0):
-			bounce_x();
 		if (col_norm.y < 0 and dir.y > 0) or (col_norm.y > 0 and dir.y < 0):
 			bounce_y();
+			
+		if (col_norm.x < 0 and dir.x > 0) or (col_norm.x > 0 and dir.x < 0):
+			bounce_x();
 	
 		if col.get_collider() is Block:
 			var block = col.get_collider() as Block;
