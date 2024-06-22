@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://j5o7mgjldals" path="res://Scenes/Ball/ball.tscn" id="1_m3avl"]
 [ext_resource type="PackedScene" uid="uid://b1mmht3sgmga" path="res://Scenes/Paddle/paddle.tscn" id="2_qkcnt"]
-[ext_resource type="PackedScene" uid="uid://bfejvjrmlamcj" path="res://Scenes/block_layout.tscn" id="3_scktw"]
+[ext_resource type="PackedScene" uid="uid://bfejvjrmlamcj" path="res://Scenes/BlockLayout/block_layout.tscn" id="3_scktw"]
 
 [node name="Game" type="Node2D"]
 
@@ -12,11 +12,11 @@ position = Vector2(540, 1700)
 [node name="Paddle" parent="." instance=ExtResource("2_qkcnt")]
 position = Vector2(540, 1800)
 
-[node name="256" parent="." instance=ExtResource("3_scktw")]
+[node name="BlockLayout" parent="." instance=ExtResource("3_scktw")]
 position = Vector2(64, 256)
-rows = 8
-cols = 9
-row_gap = 20
-col_gap = 20
+rows = 10
+cols = 4
+row_gap = 22
+col_gap = 22
 
-[editable path="256"]
+[editable path="BlockLayout"]
