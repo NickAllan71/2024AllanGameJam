@@ -14,7 +14,7 @@ position = Vector2(540, 1800)
 
 [node name="BlockLayout" parent="." instance=ExtResource("3_scktw")]
 position = Vector2(64, 256)
-rows = 15
+rows = 8
 cols = 5
 row_gap = 22
 col_gap = 22

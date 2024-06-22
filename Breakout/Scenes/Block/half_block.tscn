@@ -1,8 +1,8 @@
 [gd_scene load_steps=6 format=3 uid="uid://db5ir6aatwlsq"]
 
 [ext_resource type="Script" path="res://Scenes/Block/block.gd" id="1_3h05j"]
+[ext_resource type="Texture2D" uid="uid://kbg8dkuy8wdd" path="res://Sprites/Brick.Narrow.RHS.png" id="2_6hswp"]
 [ext_resource type="Texture2D" uid="uid://dbhhjragrlcfk" path="res://Sprites/Brick.Narrow.png" id="2_a1h5e"]
-[ext_resource type="Texture2D" uid="uid://dsxoxkk56tf17" path="res://Sprites/icon.svg" id="2_xs11f"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_byecj"]
 size = Vector2(96, 64)
@@ -11,7 +11,7 @@ size = Vector2(96, 64)
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_xs11f")
+"texture": ExtResource("2_6hswp")
 }],
 "loop": true,
 "name": &"left",
