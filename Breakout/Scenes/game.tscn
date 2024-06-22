@@ -6,15 +6,16 @@
 
 [node name="Game" type="Node2D"]
 
-[node name="Ball" parent="." instance=ExtResource("1_m3avl")]
-position = Vector2(540, 1700)
-
 [node name="Paddle" parent="." instance=ExtResource("2_qkcnt")]
 position = Vector2(540, 1800)
 
+[node name="Ball" parent="Paddle" instance=ExtResource("1_m3avl")]
+top_level = true
+position = Vector2(540, 1735)
+
 [node name="BlockLayout" parent="." instance=ExtResource("3_scktw")]
 position = Vector2(64, 256)
-rows = 15
+rows = 8
 cols = 5
 row_gap = 22
 col_gap = 22
