@@ -1,6 +1,7 @@
 extends StaticBody2D
+class_name Ball
 
-var dir = Vector2(1, 1).normalized();
+var dir = Vector2(0, 0).normalized();
 var speed = 600.0;
 
 func colliding_pos():
